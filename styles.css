@@ -1,0 +1,622 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background-color: black;
+}
+.top-panel{
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    padding: 2px 0;
+    display: flex;
+    text-align: center;
+    background-color: #252522;
+    position: fixed;
+}
+#dropdown-manu{
+    left: 0;
+    position: relative;
+    display: inline-block;
+}
+#dropdown-manu button{
+    border: 0;
+    padding: 0;
+    outline: 0;
+    background-color: #252522;
+    display: none;
+}
+#dropdown-manu button img{
+    margin: 0px 5px;
+    height: 0;
+    float: left;
+}
+.dropdown-content {
+    height: 100vh;
+    width: 300px;
+    display: none;
+    position: absolute;
+    background-color: #252522;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    padding: 10px 10px;
+    color: white;
+    padding: 12px 16px;
+    text-align: left;
+    text-decoration: none;
+    list-style: none;
+    display: block;
+}   
+
+.dropdown-content a:hover {background-color: #ddd;}
+
+#dropdown-manu:hover .dropdown-content {display: block;}
+
+.logo{
+    float: left;
+    display: flex;
+}
+.logo img{
+    height: 30px;
+}
+.logo a{
+    text-decoration: none;
+}
+.logo a li{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    list-style: none; 
+    padding: 5px 5px;
+}
+.top-panel .nav-bar{
+    margin: auto;
+    display: flex;
+}
+.top-panel .nav-bar ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top: 5px; 
+    font-weight: 1px;
+}
+.top-panel .nav-bar ul a{
+    color: white;
+    text-decoration: none;
+}
+.top-panel .nav-bar ul li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: rgb(200, 0, 0);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.top-panel .nav-bar ul li:hover::after{
+    width: 100%;
+}
+.top-panel #shopping-bag img{
+    height: 30px;
+    float: right;
+    padding: 0 0.5px;
+}
+.top-panel #my-list img{
+    height: 25px;
+    float: right;
+    padding: 2px 2px;
+}
+.top-panel #user img{
+    height: 25px;
+    float: right;
+    padding: 2px 2px;
+}
+.slide-background{
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    backface-visibility: hidden;
+    animation: slideBh 50s linear infinite 5s;
+    animation-timing-function: ease-in-out;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0.1)), url("Bakemonogatari-Ep.-3.jpg");
+}
+@keyframes slideBh{
+    0%{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0.1)), url("anime-cityscape-landscape-scenery-5k-r6-1920x1080.jpg");
+    }
+    25%{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0.1)), url("167440.jpg");
+    }
+    50%{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0.1)), url("a9e8603c729f89e6d7c427b48ab74fca.png");
+    }
+    75%{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0.1)), url("248981.jpg");
+    }
+    100%{
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0.1)), url("Bakemonogatari-Ep.-3.jpg");
+    }
+}
+
+#books-icon img{
+    height: 30px;
+    margin-top: 100px;
+}
+.search-bar input{
+    margin: 5px 10px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px 7px;
+    height: 20px;
+    width: 250px;
+}
+.content{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+}
+.book-category{
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+.book-container{
+    display: flex;
+    padding: 10px 10px;
+    height: 200px;
+    overflow: scroll;
+}
+.book-container::-webkit-scrollbar{
+    display: none;
+}
+.book-container a{
+    text-decoration: none;
+}
+#salebook-category .book-container{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0.1)), chocolate;
+}
+#hotbook-category .book-container{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0.1)), darkred;
+}
+#newbook-category .book-container{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0.1)),  lightseagreen;
+}
+#most-revievedbook-category .book-container{
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0.1)), darkblue;
+}
+
+.book-post{
+    width: 250px;
+    height: 150px;
+    padding: 10px 10px;
+    margin: 10px 10px;
+    background-color: #252522;
+    border-image-width: auto;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    font-size: 0;
+}
+.book-post:hover{
+    width: 300px;
+    height: 175px;
+    margin: auto;
+    display: flex;
+    font-size: 11px;
+}
+.book-post img{
+    height: 150px;
+    float: left;
+}
+.book-detail{
+    display: inline;
+}
+.book-detail .book-description{
+    color: white;
+    padding: 5px 5px;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+}
+
+.book-detail .book-description #book-title{
+    font-size: medium;
+}
+.book-detail .book-description #book-author{
+    font-size: small;
+    padding: 2px 2px;
+}
+.book-detail .book-description #book-preview{
+    padding: 2px 2px;
+}
+.book-detail #book-price{
+    right: 0;
+    float: right;
+    margin: 5px 5px;
+    font-size: 12px;
+    color: white;
+}
+
+#salebook-category .book-post{
+    background: linear-gradient(rgba(228, 113, 113, 0.2), rgb(243, 164, 164)), #feaa62;
+}
+#salebook-category #salebook-post h6{
+    float: left;
+}
+#hotbook-category .book-post{
+    background: linear-gradient(rgba(228, 113, 113, 0.2), rgb(243, 164, 164)), #fe4449;
+}
+#newbook-category .book-post{
+    background: linear-gradient(rgba(228, 113, 113, 0.2), rgb(243, 164, 164)), aquamarine;
+}
+#most-revievedbook-category .book-post{
+    background: linear-gradient(rgba(228, 113, 113, 0.2), rgb(243, 164, 164)), #79a6d9;
+}
+
+
+
+
+
+
+
+/* Patsu page */
+
+#patsu{
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0)), url("library.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-x: hidden;
+}
+#patsu #header .title{ 
+    margin-top: 500px;
+    padding: 20px 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    font-size: 20px;
+}
+.Content{
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+}
+.Sort_Post{
+    background-color: #252522;
+}
+.Sort_Post h4{
+    display: inline-flex;
+}
+.Sort_Post input{
+    margin-left: 15px;
+}
+.Post{
+    margin: 100px auto;
+    text-align: center;
+    align-content: center;
+    width: 500px;
+    height: 500px;
+    border-radius: 10px;
+    color: white;
+    background-color: #252522;
+}
+.Post img{
+    width: 400px;
+    height: 400px;
+}
+.Post hr{
+    margin: auto;
+    margin-top: 45px;
+    size: 2px;
+    color: gray;
+    width: 250px;
+}
+.profile{
+    padding: 10px 0px;
+    border-radius: 10px;
+    background-color: #30302f;
+    display: inline-flex;
+    width: inherit;
+}
+.profile img{
+    height: 30px;
+    width: 30px;
+    float: left;
+    margin: 0px 10px;
+    background-color: gray;
+}
+.Caption{
+    text-align: left;
+}
+.comment-section{
+    background-color: #30302f;
+    border-radius: 10px;
+    padding: 5px 5px;
+    display: flex;
+}
+.comment-section img{
+    height: 30px;
+    width: 30px;
+}
+.vl{
+    margin: 0px 5px;
+    height: 35px;
+    width: 2px;
+    background-color: gray;
+}
+.comment-section .comment-box{
+    padding: 5px 5px;
+}
+.comment-section .comment-box input{
+    padding: 2px 5px;
+    border: none;
+    outline: none;
+    height: 20px;
+    width: 390px;
+    border-radius: 10px;
+}
+.btn_upload{
+    outline: 0.5px;
+    border: none;
+    background-color: #30302f;
+}
+
+
+/* book-detail */
+.book-form{
+    border: 20px;
+    border: white;
+    height: max-content;
+    margin: 50px 100px;
+    padding: 0px 15px;
+    border-radius: 10px;
+    background-color: #30302f;
+}
+.book-form-detail{
+    margin: auto;
+    margin-top: 50px;
+    padding: 30px 50px;;
+    display: flex;
+}
+.book{
+    text-align: center;
+    padding: 10px 10px;
+}
+.book img{
+    border: 2px;
+    height: 250px;
+    margin: auto;
+}
+.book hr{
+    width: 200px;
+    margin: auto;
+}
+.book button{
+    display: inline-flex;
+    margin: auto;
+    border: none;
+    outline: none;
+    margin: auto;
+    margin-top: 5px;
+    padding: 0px 2px;
+    border-radius: 15px;
+    background-color: slategray;
+}
+.book button h4{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 5px 5px;
+    margin-top: 3px;
+}
+.book button img{
+    height: 30px;
+    padding: 2px 5px;
+    float: right;
+}
+.book h4{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5px 5px;
+}
+.book-form .book-caption .title{
+    color: white;
+    margin: 2px 2px;
+}
+.book-form .book-caption {
+    color: grey;
+    margin: 5px 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+}
+
+
+/* Contact us page */
+
+
+#contact-form{
+    margin: auto;
+    width: max-content;
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    border-radius: 15px;
+    color: white;
+    background-color: #252522;
+}
+.Contact_Input{
+    display: block;
+    margin: 20px 20px;
+}
+.Contact_Input input {
+    width: 300px;
+    border: none;
+    outline: none;
+    color: white;
+    background-color: #252522;  
+}
+.Contact_Input hr{
+    margin: auto;
+    size: 2px;
+    width: 300px;
+}
+.Contact_Input textarea{
+    border: none;
+    outline: none;
+    padding: 2px 2px;
+    border-radius: 5px;
+}
+.Contact_Input textarea::-webkit-scrollbar{
+    display: none;
+}
+.btn_Send{
+    padding: 10px 20px;
+    border: 0;
+    font-weight: bold;
+}
+
+.location{
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+.location h3{
+    color: white;
+    margin-top: 200px;
+}
+
+/* footer */
+
+footer{
+    height: 250px;
+    background-color: #252522;
+    display: flex;
+    text-align: center;
+}
+.contact-us{
+    width: 250px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    text-align: left;
+}
+#contact{
+    float: left;
+    text-align: left;
+    margin-top: 15px;
+}
+#follow{
+    margin: auto;
+    margin-top: 15px;
+    text-align: left;
+}
+.contact-us .contact-detail{
+    display: flex;
+    text-align: left;
+}
+.contact-us .contact-detail img{
+    height: 20px;
+    margin: 2px 5px;
+}
+.contact-detail .contact-info{
+    margin: 2px 2px;
+}
+.contact-detail .contact-info p{
+    font-size: 15PX;
+    margin: 0px 5px;
+}
+footer h5{
+    color: white;
+}
+
+
+
+/* about */
+.about{
+    margin: auto;
+    padding: auto;
+    margin-top: 100px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+
+
+@media only screen and (max-width: 1000px) {
+    #dropdown-manu button{
+        display: block;
+    }
+    #dropdown-manu button img{
+        margin: 0px 5px;
+        height: 30px;
+        float: left;
+    }
+    .logo{
+        margin: auto;
+        float: none;
+    }
+    .top-panel .nav-bar{
+        display: none;
+    }
+
+    .Post{
+        height: 350px;
+        width: 350px;
+    }
+    .Post .content-img{
+        height: 250px;
+        width: 250px;
+    }
+    .Post .comment-section .comment-box input{
+        width: 240px;
+    }
+
+    footer{
+        display: unset;
+        text-align: center;
+        height: max-content;
+        background-color: #252522;
+    }
+    footer .contact-us{
+        width: auto;
+        margin: 25px 25px;
+        padding: auto;
+        text-align: center;
+    }
+    footer #contact{
+        float: none;
+        margin: 25px 25px;
+        position: unset;
+        text-align: center;
+    }
+    footer #follow{
+        float: none;
+        margin: 25px 25px;
+        position: unset;
+        text-align: center;
+    }
+    .contact-us .contact-detail{
+        text-align: left;
+    }
+
+    .book-form{
+        border: white;
+        height: max-content;
+        margin: 50px 20px;
+        padding: 0px 5px;
+        border-radius: 10px;
+        background-color: #30302f;
+    }
+    .book-form-detail{
+        margin: auto;
+        margin-top: 50px;
+        padding: 10px 20px;;
+        display: unset;
+        height: auto;
+    }
+}
