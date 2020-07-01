@@ -12,7 +12,7 @@ body{
     top: 0;
     left: 0;
     right: 0;
-    height: 30px;
+    height: 2rem;
     padding: 2px 0;
     display: flex;
     text-align: center;
@@ -160,6 +160,7 @@ body{
     height: 20px;
     width: 250px;
 }
+
 .content{
     color: white;
     font-family: 'Roboto', sans-serif;
@@ -208,7 +209,7 @@ body{
 }
 .book-post:hover{
     width: 300px;
-    height: 175px;
+    height: 185px;
     margin: auto;
     display: flex;
     font-size: 11px;
@@ -398,12 +399,16 @@ body{
     width: 200px;
     margin: auto;
 }
+.book a{
+    text-decoration: none;
+}
 .book button{
     display: inline-flex;
     margin: auto;
     border: none;
     outline: none;
     margin: auto;
+    cursor: pointer;
     margin-top: 5px;
     padding: 0px 2px;
     border-radius: 15px;
@@ -427,7 +432,7 @@ body{
 }
 .book-form .book-caption .title{
     color: white;
-    margin: 2px 2px;
+    margin: 5px 5px;
 }
 .book-form .book-caption {
     color: grey;
@@ -495,25 +500,18 @@ body{
 
 footer{
     height: 250px;
-    background-color: #252522;
-    display: flex;
     text-align: center;
-}
-.contact-us{
-    width: 250px;
-    font-family: 'Roboto', sans-serif;
+    padding: 15px 15px;
+    display: flex;
     color: white;
-    text-align: left;
+    background-color: #252522;
+    font-family: 'Roboto', sans-serif;
 }
-#contact{
-    float: left;
-    text-align: left;
-    margin-top: 15px;
-}
-#follow{
-    margin: auto;
-    margin-top: 15px;
-    text-align: left;
+footer .contact-bar{
+    width: 80%;
+    margin: 20px 20px;
+    padding: 10px 10px;
+    text-align: center;
 }
 .contact-us .contact-detail{
     display: flex;
@@ -521,7 +519,7 @@ footer{
 }
 .contact-us .contact-detail img{
     height: 20px;
-    margin: 2px 5px;
+    margin: 5px 5px;
 }
 .contact-detail .contact-info{
     margin: 2px 2px;
@@ -530,8 +528,9 @@ footer{
     font-size: 15PX;
     margin: 0px 5px;
 }
-footer h5{
-    color: white;
+.contact-detail .contact-info a{
+    color: gray;
+    text-decoration: none;
 }
 
 
@@ -545,23 +544,165 @@ footer h5{
     color: white;
 }
 
+/* login form */
+
+#Login-form{
+    color: white;
+    background-color: black;
+    text-align: center;
+}
+.form{
+    margin: auto;
+    margin-top: 100px;
+    height: 400px;
+    width: 400px;
+    padding: 50px 25px;
+    border-radius: 15px;
+    background-color: #252522;
+}
+.form h3{
+    position: relative;
+    margin-bottom: 150px;
+}
+.form button{
+    margin: 20px 20px;
+}
 
 
 @media only screen and (max-width: 1000px) {
+    .top-panel{
+        height: 5rem;
+    }
     #dropdown-manu button{
         display: block;
     }
     #dropdown-manu button img{
         margin: 0px 5px;
-        height: 30px;
+        height: 5rem;
         float: left;
     }
+    .dropdown-content {
+        height: 100vh;
+        width: 500px;
+        display: none;
+        position: absolute;
+        background-color: #252522;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    .dropdown-content a {
+        font-size: 40px;
+        margin: 20px 15px;
+        color: white;
+        padding: 12px 16px;
+        text-align: left;
+        text-decoration: none;
+        list-style: none;
+        display: block;
+    }   
     .logo{
         margin: auto;
         float: none;
     }
+    .logo img{
+        height: 5rem;
+    }
+    .logo a li{
+        margin: 5px 5px;
+        font-size: 3rem;
+    }
     .top-panel .nav-bar{
         display: none;
+    }
+    .top-panel #shopping-bag img{
+        height: 5rem;
+        float: right;
+        padding: 0 0.5px;
+    }
+    .top-panel #my-list img{
+        height: 4rem;
+        float: right;
+        padding: 2px 2px;
+    }
+    .top-panel #user img{
+        height: 4rem;
+        float: right;
+        padding: 2px 2px;
+    }
+    #books-icon img{
+        height: 6rem;
+        margin-top: 300px;
+    }
+    .search-bar input{
+        border: none;
+        outline: none;
+        font-size: 30px;
+        margin: 5px 10px;
+        border-radius: 20px;
+        padding: 15px 20px;
+        height: 40px;
+        width: 550px;
+    }
+    .book-category h2{
+        border: none;
+        font-size: 40px;
+    }
+    .book-container{
+        border: none;
+        display: flex;
+        padding: 20px 20px;
+        height: 350px;
+        overflow: scroll;
+    }
+    .book-post{
+        width: 500px;
+        height: 300px;
+        padding: 10px 10px;
+        margin: 10px 10px;
+        background-color: #252522;
+        border-image-width: auto;
+        border-radius: 10px;
+        display: flex;
+        overflow: hidden;
+        font-size: 0;
+    }
+    .book-post:hover{
+        width: 600px;
+        height: 400px;
+        margin: auto;
+        display: flex;
+        font-size: 20px;
+    }
+    .book-post img{
+        height: 300px;
+        float: left;
+    }
+    .book-detail{
+        display: inline;
+    }
+    .book-detail .book-description{
+        color: white;
+        padding: 15px 15px;
+        font-family: 'Roboto', sans-serif;
+        display: inline-block;
+    }
+    .book-detail .book-description #book-title{
+        font-size: 30px;
+    }
+    .book-detail .book-description #book-author{
+        font-size: 25px;
+        padding: 5px 5px;
+    }
+    .book-detail .book-description #book-preview{
+        padding: 5px 5px;
+    }
+    .book-detail #book-price{
+        right: 0;
+        bottom: 0;
+        float: right;
+        margin: 5px 5px;
+        font-size: 20px;
+        color: white;
     }
 
     .Post{
@@ -577,40 +718,61 @@ footer h5{
     }
 
     footer{
-        display: unset;
+        width: 100%;
+        color: white; 
         text-align: center;
         height: max-content;
+        display: inline-block;
         background-color: #252522;
+        font-family: 'Roboto', sans-serif;
+    }
+    footer .contact-bar{
+        margin: auto;
     }
     footer .contact-us{
         width: auto;
-        margin: 25px 25px;
+        margin: auto;
         padding: auto;
         text-align: center;
+        display: flex;
     }
     footer #contact{
         float: none;
-        margin: 25px 25px;
+        margin: auto;
         position: unset;
         text-align: center;
+        margin-top: 20px;
     }
     footer #follow{
         float: none;
-        margin: 25px 25px;
+        margin: auto;
         position: unset;
         text-align: center;
+        margin-top: 20px;
     }
-    .contact-us .contact-detail{
-        text-align: left;
+    footer .contact-us .contact-detail{
+        float: none;
+        margin: auto;
+        text-align: center;
+        display: inline-block;
+        margin-top: 10px;
     }
+    footer .contact-us .contact-detail img{
+        float: none;
+        margin: auto;
+    }
+    footer .contact-us .contact-detail .contact-info{
+        margin: auto;
+    }
+    
 
     .book-form{
         border: white;
         height: max-content;
-        margin: 50px 20px;
+        margin: 100px 20px;
         padding: 0px 5px;
         border-radius: 10px;
-        background-color: #30302f;
+        background-color: #252522;
     }
     .book-form-detail{
         margin: auto;
@@ -618,5 +780,25 @@ footer h5{
         padding: 10px 20px;;
         display: unset;
         height: auto;
+    }
+    .book img{
+        border: 2px;
+        height: 500px;
+        margin: auto;
+    }
+    .book-form-detail .book button{
+        height: 80px;
+        width: 200px;
+        margin: 20px 20px;
+    }
+    .book button h4{
+        font-size: 20px;
+        padding: 15px 15px;
+        margin: auto;
+    }
+    .book button img{
+        height: 30px;
+        padding: 2px 5px;
+        float: right;
     }
 }

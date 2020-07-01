@@ -76,12 +76,22 @@
                 <h4>Price: 5.50$</h4>
                 <button>
                     <img src="add-list.png">
-                    <h4>Add to list</h4>
+                    <h4 id="add-list">Add to list</h4>
+                    <script>
+                        document.getElementById("add-list").addEventListener("click", myFunction);
+
+                        function myFunction() {
+                            document.getElementById("add-list").innerHTML = "Item added";
+                        }
+                    </script>
                 </button>
-                <button>
-                    <img src="buy-now.png">
-                    <h4>Buy now</h4>
-                </button>
+                <a href="https://www.amazon.com/Simple-Thinking-Remove-Complexity-Life-ebook/dp/B01HP3RKF2/ref=sr_1_2?dchild=1&keywords=simple+thinking&qid=1593586768&sr=8-2"
+                    target="_blank">
+                    <button>
+                        <img src="buy-now.png">
+                        <h4>Buy now</h4>
+                    </button>
+                </a>
             </div>
             <div class="book-caption">
                 <div class="title">
@@ -123,14 +133,16 @@
         <div class="book-container">
             <a href="index.html" target="_self">
                 <div id="salebook-post" class="book-post">
-                    <img src="the-lying-life-of-adults.jpg">
+                    <img src="creating-tmrs-schools-today.jpg">
                     <div class="book-detail">
                         <div class="book-description">
-                            <h4 id="book-title">The Lying Life of Adults</h4>
-                            <h5 id="book-author"> - Elena Ferrante</h5>
+                            <h4 id="book-title">Creating Tomorrow's Schools Today</h4>
+                            <h5 id="book-author"> - Richard Gerver</h5>
                             <p id="book-preview">
-                                Giovanna's pretty face has changed: it's turning into the face of an ugly, spiteful
-                                adolescent. But is she seeing things as they really are?
+                                Education is the platform for our success or failure, but is our system still fit for
+                                purpose? Will our children be equipped to face the challenges the future holds: the
+                                rapidly changing employment patterns and the global environmental, economic and social
+                                crises ahead of us?
                             </p>
                         </div>
                         <h6 id="book-price">Price: 18.00$</h6>
@@ -139,52 +151,32 @@
             </a>
             <a href="index.html" target="_self">
                 <div id="salebook-post" class="book-post">
-                    <img src="the jane austen society.jpg">
+                    <img src="education-a-manifesto-for-change.jpg">
                     <div class="book-detail">
                         <div class="book-description">
-                            <h4 id="book-title">The Jane Austen Society</h4>
-                            <h5 id="book-author"> - Natalie Jenner</h5>
+                            <h4 id="book-title">Education: A Manifesto for Change</h4>
+                            <h5 id="book-author"> - Richard Gerver</h5>
                             <p id="book-preview">
-                                Just after the Second World War, in the small English village of Chawton, an unusual but
-                                like-minded group of people band together to attempt something remarkable.
+                                Education has never been more important than it is now but the current school system
+                                lacks the continuity and longevity required to ensure young people can survive and
+                                thrive as we continue to head into the unknown.
                             </p>
                         </div>
-                        <h6 id="book-price">Price: 16.00$</h6>
+                        <h6 id="book-price">Price: 26.00$</h6>
                     </div>
                 </div>
             </a>
             <a href="index.html" target="_self">
                 <div id="salebook-post" class="book-post">
-                    <img src="exile music.jpg">
+                    <img src="change.jpg">
                     <div class="book-detail">
                         <div class="book-description">
-                            <h4 id="book-title">Exile Music</h4>
-                            <h5 id="book-author"> - Jennifer Steil</h5>
+                            <h4 id="book-title">Change</h4>
+                            <h5 id="book-author"> - Richard Gerver</h5>
                             <p id="book-preview">
-                                As a young girl growing up in Vienna in the 1930s, Orly has an idyllic childhood filled
-                                with
-                                music. Her father plays the viola in the Philharmonic, her mother is a well-regarded
-                                opera
-                                singer, her beloved and charismatic older brother holds the neighborhood in his thrall.
-                            </p>
-                        </div>
-                        <h6 id="book-price">Price: 25.00$</h6>
-                    </div>
-                </div>
-            </a>
-            <a href="index.html" target="_self">
-                <div id="salebook-post" class="book-post">
-                    <img src="this coven won't break.jpg">
-                    <div class="book-detail">
-                        <div class="book-description">
-                            <h4 id="book-title">This Coven Won't Break</h4>
-                            <h5 id="book-author"> - Isabel Sterling</h5>
-                            <p id="book-preview">
-                                Hannah Walsh just wants a normal life. It's her senior year, so she should be focusing
-                                on
-                                classes, hanging out with her best friend, and flirting with her new girlfriend, Morgan.
-                                But it turns out surviving a murderous Witch Hunter doesn't exactly qualify as a summer
-                                vacation
+                                The pace of change is greater than ever. We face new challenges every day in our jobs
+                                and in our personal lives. Those who can handle change are the most fulfilled. Those who
+                                fear change will find it hardest to thrive.
                             </p>
                         </div>
                         <h6 id="book-price">Price: 16.00$</h6>
@@ -215,125 +207,140 @@
                 </div>
             </a>
             <a href="index.html" target="_self">
-                <div id="salebook-post" class="book-post">
-                    <img src="the jane austen society.jpg">
+                <div class="book-post">
+                    <img src="reality-check.jpg">
                     <div class="book-detail">
                         <div class="book-description">
-                            <h4 id="book-title">The Jane Austen Society</h4>
-                            <h5 id="book-author"> - Natalie Jenner</h5>
+                            <h4 id="book-title">Reality Check</h4>
+                            <h5 id="book-author"> - Guy Kawasaki</h5>
                             <p id="book-preview">
-                                Just after the Second World War, in the small English village of Chawton, an unusual but
-                                like-minded group of people band together to attempt something remarkable.
+                                In Silicon Valley slang, a bozo explosion is what causes a lean, mean, fighting
+                                machine of a
+                                company to slide into mediocrity.
+                                If the two most popular words in your company are "partner" and "strategic," and
+                                "partner"
+                                has become a verb, and "strategic" is used to describe decisions.
                             </p>
                         </div>
-                        <h6 id="book-price">Price: 16.00$</h6>
+                        <h6 id="book-price">Price: 19.00$</h6>
                     </div>
                 </div>
             </a>
             <a href="index.html" target="_self">
-                <div id="salebook-post" class="book-post">
-                    <img src="exile music.jpg">
+                <div class="book-post">
+                    <img src="change-by-design.jpg">
                     <div class="book-detail">
                         <div class="book-description">
-                            <h4 id="book-title">Exile Music</h4>
-                            <h5 id="book-author"> - Jennifer Steil</h5>
+                            <h4 id="book-title">Change By Design</h4>
+                            <h5 id="book-author"> - Tim Brown</h5>
                             <p id="book-preview">
-                                As a young girl growing up in Vienna in the 1930s, Orly has an idyllic childhood filled
-                                with
-                                music. Her father plays the viola in the Philharmonic, her mother is a well-regarded
-                                opera
-                                singer, her beloved and charismatic older brother holds the neighborhood in his thrall.
+                                The myth of innovation is that brilliant ideas leap fully formed from the minds of
+                                geniuses.
+                                The reality is that most innovations come from a process of rigorous examination
+                                through
+                                which great ideas are identified and developed before being realized as new
+                                offerings and
+                                capabilities.
                             </p>
                         </div>
-                        <h6 id="book-price">Price: 25.00$</h6>
+                        <h6 id="book-price">Price: 23.00$</h6>
                     </div>
                 </div>
             </a>
             <a href="index.html" target="_self">
-                <div id="salebook-post" class="book-post">
-                    <img src="this coven won't break.jpg">
+                <div class="book-post">
+                    <img src="creative-confidence.jpg">
                     <div class="book-detail">
                         <div class="book-description">
-                            <h4 id="book-title">This Coven Won't Break</h4>
-                            <h5 id="book-author"> - Isabel Sterling</h5>
+                            <h4 id="book-title">Creative Confindence</h4>
+                            <h5 id="book-author"> - Tom Kelley</h5>
                             <p id="book-preview">
-                                Hannah Walsh just wants a normal life. It's her senior year, so she should be focusing
-                                on
-                                classes, hanging out with her best friend, and flirting with her new girlfriend, Morgan.
-                                But it turns out surviving a murderous Witch Hunter doesn't exactly qualify as a summer
-                                vacation
+                                Too often, companies and individuals assume that creativity and innovation are the
+                                domain of
+                                the "creative types." But two of the leading experts in innovation,
+                                design, and creativity on the planet show us that each and every one of us is
+                                creative.
                             </p>
                         </div>
-                        <h6 id="book-price">Price: 16.00$</h6>
+                        <h6 id="book-price">Price: 18.00$</h6>
                     </div>
                 </div>
             </a>
         </div>
     </div>
-    
+
 
 </body>
 
 <footer>
-    <div id="contact" class="contact-us">
+
+    <div class="contact-bar">
         <h3>Contact Us</h3>
         <hr>
-        <div class="contact-detail">
-            <img src="phone-call.png">
-            <div class="contact-info">
-                <h4>Tel:</h4>
-                <p>099 978 855</p>
-                <p>099 978 855</p>
-                <p>099 978 855</p>
+        <div id="contact" class="contact-us">
+            <div class="contact-detail">
+                <img src="phone-call.png">
+                <div class="contact-info">
+                    <h4>Tel:</h4>
+                    <p>099 978 855</p>
+                    <p>099 978 855</p>
+                    <p>099 978 855</p>
+                </div>
             </div>
-        </div>
-        <div class="contact-detail">
-            <img src="location.png">
-            <div class="contact-info">
-                <h4>Address:</h4>
-                <p>Useless Islands, Fiordland National Park 9691</p>
-                <p>New Zealand</p>
+            <div class="contact-detail">
+                <img src="location.png">
+                <div class="contact-info">
+                    <h4>Address:</h4>
+                    <p>Useless Islands, Fiordland National Park 9691</p>
+                    <p>New Zealand</p>
+                </div>
             </div>
-        </div>
-        <div class="contact-detail">
-            <img src="email.png">
-            <div class="contact-info">
-                <h4>Email:</h4>
-                <p>ochin-chin.com</p>
+            <div class="contact-detail">
+                <img src="email.png">
+                <div class="contact-info">
+                    <h4>Email:</h4>
+                    <p>ochin-chin.com</p>
+                </div>
             </div>
         </div>
     </div>
 
-    <div id="follow" class="contact-us">
+
+    <div class="contact-bar">
         <h3>Follow us</h3>
         <hr>
-        <div class="contact-detail">
-            <img src="facebook.png">
-            <div class="contact-info">
-                <h4>Facebook:</h4>
-                <a href="facebook.com" target="_blank">
-                    facebook.com
-                </a>
+        <div id="follow" class="contact-us">
+            <div class="contact-detail">
+                <img src="facebook.png">
+                <div class="contact-info">
+                    <h4>Facebook:</h4>
+                    <a href="facebook.com" target="_blank">
+                        facebook.com
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="contact-detail">
-            <img src="instagram.png">
-            <div class="contact-info">
-                <h4>Instagram:</h4>
-                <a href="instagram.com" target="_blank">
-                    instagram.com
-                </a>
+            <div class="contact-detail">
+                <img src="instagram.png">
+                <div class="contact-info">
+                    <h4>Instagram:</h4>
+                    <a href="instagram.com" target="_blank">
+                        instagram.com
+                    </a>
+                </div>
             </div>
-        </div>
-        <div class="contact-detail">
-            <img src="youtube.png">
-            <div class="contact-info">
-                <h4>Youtube:</h4>
-                <a href="youtube.png" target="_blank">
-                    youtube.png
-                </a>
+            <div class="contact-detail">
+                <img src="youtube.png">
+                <div class="contact-info">
+                    <h4>Youtube:</h4>
+                    <a style="text-decoration: none;" href="youtube.png" target="_blank">
+                        youtube.com
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    <h5>Copyright © 2020 O Chin Chin Inc. All rights reserved.</h5>
+    <div class="contact-bar">
+        <h5>Copyright © 2020 O Chin Chin Inc. All rights reserved.</h5>
+    </div>
 </footer>
+</html>
