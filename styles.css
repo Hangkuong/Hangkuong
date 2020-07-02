@@ -4,6 +4,7 @@
 }
 html{
     scroll-behavior: smooth;
+    position: relative;
 }
 body{
     background-color: black;
@@ -499,7 +500,7 @@ body{
 /* footer */
 
 footer{
-    height: 250px;
+    height: fit-content;
     text-align: center;
     padding: 15px 15px;
     display: flex;
@@ -508,29 +509,35 @@ footer{
     font-family: 'Roboto', sans-serif;
 }
 footer .contact-bar{
-    width: 80%;
+    width: 30%;
     margin: 20px 20px;
     padding: 10px 10px;
     text-align: center;
+    position: relative;
+
 }
 .contact-us .contact-detail{
-    display: flex;
-    text-align: left;
+    display: inline-block;
+    text-align: center;
+    margin: auto;
 }
 .contact-us .contact-detail img{
     height: 20px;
-    margin: 5px 5px;
+    margin: 5px auto;
 }
 .contact-detail .contact-info{
     margin: 2px 2px;
 }
 .contact-detail .contact-info p{
     font-size: 15PX;
-    margin: 0px 5px;
 }
 .contact-detail .contact-info a{
     color: gray;
     text-decoration: none;
+}
+.contact-bar #copyright{
+    position: absolute;
+    bottom: 0;
 }
 
 
@@ -570,6 +577,10 @@ footer .contact-bar{
 
 
 @media only screen and (max-width: 1000px) {
+    
+    body{
+        width: 100%;
+    }
     .top-panel{
         height: 5rem;
     }
@@ -600,6 +611,9 @@ footer .contact-bar{
         list-style: none;
         display: block;
     }   
+    /* .dropdown-content a .open{
+        font-size: 0px;
+    } */
     .logo{
         margin: auto;
         float: none;
@@ -718,7 +732,10 @@ footer .contact-bar{
     }
 
     footer{
-        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 97%;
         color: white; 
         text-align: center;
         height: max-content;
@@ -727,35 +744,26 @@ footer .contact-bar{
         font-family: 'Roboto', sans-serif;
     }
     footer .contact-bar{
-        margin: auto;
+        width: 80%;
+        margin: 20px auto;
+        text-align: center;
     }
     footer .contact-us{
         width: auto;
         margin: auto;
         padding: auto;
-        text-align: center;
         display: flex;
-    }
-    footer #contact{
-        float: none;
-        margin: auto;
-        position: unset;
+        padding: 10px 10px;
         text-align: center;
-        margin-top: 20px;
-    }
-    footer #follow{
-        float: none;
-        margin: auto;
-        position: unset;
-        text-align: center;
-        margin-top: 20px;
+        align-items: center;
     }
     footer .contact-us .contact-detail{
         float: none;
-        margin: auto;
+        width: 30%;
+        margin: 10px auto;
         text-align: center;
+        align-items: center;
         display: inline-block;
-        margin-top: 10px;
     }
     footer .contact-us .contact-detail img{
         float: none;
@@ -763,6 +771,11 @@ footer .contact-bar{
     }
     footer .contact-us .contact-detail .contact-info{
         margin: auto;
+    }
+    footer .contact-bar #copyright{
+        margin: auto;
+        position: unset;
+        bottom: unset;
     }
     
 
